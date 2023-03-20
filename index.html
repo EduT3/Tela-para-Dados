@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DADOS PARA ACESSO</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="meuForm" onsubmit="enviarDados(event)">
+        <h2>Dados</h2>
+        <div class="inputs-wrapper">
+          <input type="text" id="email" placeholder="Email" name="email" />
+          <input type="password" id="senha" placeholder="Senha" name="password" />
+          <input type="text" id="telefone" placeholder="Telefone" name="telefone" />
+          <input type="text" id="nacionalidade" placeholder="Nacionalidade" name="nacionalidade" />
+          <input type="submit" value="Guardar" />
+        </div>
+        <section id="dados-exibidos"></section>
+      </form>
+
+
+    <script
+      src="https://kit.fontawesome.com/535810b8ac.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
