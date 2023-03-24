@@ -1,5 +1,10 @@
 # Tela-para-Dados
 
-<a href="https://dados-two.vercel.app/">Site</a>
+Este Site foi criado para manipular um form, armazenando e mostrando os dados inseridos
 
-<p>Este Site foi criado para manipular um form, armazenando e mostrando os dados inseridos</p>
+| :placard: Vitrine.Dev |     |
+| -------------  | --- |
+| :sparkles: Nome        | **Tela-para-Dados**
+| :label: Tecnologias | HTML, CSS, JavaScript (tecnologias utilizadas)
+| :rocket: URL         | https://url-deploy.com.br
+| :fire: Desafio     | https://url-do-desafio.com.br
