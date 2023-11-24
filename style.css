@@ -110,6 +110,7 @@ input::placeholder{
     color: rgba(133 119 144 / 78%);
 }
 
-
-
+section {
+    color: white;
+}
 
