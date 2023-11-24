@@ -114,3 +114,16 @@ section {
     color: white;
 }
 
+h1 {
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    z-index: 2; /* Para garantir que o h1 esteja acima do formulário */
+}
