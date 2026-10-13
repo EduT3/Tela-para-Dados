@@ -1,116 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,400&display=swap');
-
-:root{
-    --morphic-color: rgba(16 18 27 / 50%)
-}
-
-body {
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(45deg, #fc466b, #3f5efb);
-    background-size: 150% 150%;
-    font-family: "Montserrat", sans-serif;
-    overflow: hidden;
-    animation: fundo-animado 10s ease infinite;
-}
-
-@keyframes fundo-animado {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-
-.container{
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
-    padding-top: 150px;
-}
-
-form{
-    position: relative;
-    background-color: var(--morphic-color);
-    padding: 0 3em 2em;
-    border-radius: 20px;
-    border-left: 1px solid var(--morphic-color);
-    border-top: 1px solid var(--morphic-color);
-    backdrop-filter: blur(20px);
-    box-shadow: 20px 20px 20px -6px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    transition: all 0.2 ease-in-out;
-}
-
-form h2{
-    font-weight: 500;
-    color: #ffffff;
-    font-size: 3rem;
-    text-transform: uppercase; 
-    letter-spacing: 3px;
-}
-
-.inputs-wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-input{
-    width: 200px;
-    padding: 1em;
-    margin-bottom: 2em;
-    background: transparent;
-    border: none;
-    border-left: 1px solid var(--morphic-color);
-    border-top: 1px solid var(--morphic-color);
-    border-radius: 1em;
-    backdrop-filter: blur(5px);
-    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
-    color: #ffffff;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    transition: all 0.2s ease-in-out;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-input:hover{
-    background-color: rgba(255,255,255,0.1);
-    box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
-}
-
-input[type="email"]:focus, 
-input[type="password"]:focus { 
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
-}
-
-input[type="submit"]:focus {
-    font-family: "Montserrat", sans-serif;
-    margin: 10px 0 2.5rem;
-    width: 150px;
-    font-size: 1rem;
-}
-
-input[type="submit"]:focus {
-    cursor: pointer;
-}
-
-input[type="submit"]:focus {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-input::placeholder{
-    font-family: "Montserrat", sans-serif;
-    color: rgba(133 119 144 / 78%);
-}
-
-section {
-    color: white;
-}
-
+* { box-sizing: border-box; }
+:root { font-family: system-ui, sans-serif; color: #fff; background: #20203d; }
+body { margin: 0; min-height: 100vh; background: linear-gradient(130deg, #572842, #242657 65%, #193c58); line-height: 1.6; }
+.container { width: min(100% - 2rem, 1080px); margin: auto; padding: clamp(2rem, 7vw, 5rem) 0; }
+header { max-width: 700px; margin-bottom: 2.5rem; }
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin: .5rem 0 1rem; }
+h2 { font-size: 1.25rem; margin: 0 0 1rem; }
+.eyebrow { letter-spacing: .12em; font-size: .8rem; color: #ffcedf; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
+form, article { background: #181a35; padding: 1.5rem; border: 1px solid #767592; border-radius: 1.25rem; }
+label { display: block; font-weight: 600; margin-bottom: .4rem; }
+input { width: 100%; margin-bottom: 1.25rem; padding: .9rem; border: 1px solid #a5a3c4; border-radius: .6rem; background: #fff; color: #17172c; font: inherit; }
+button { cursor: pointer; border: 0; padding: .85rem 1.2rem; border-radius: .6rem; background: #ffcede; color: #381c2d; font: inherit; font-weight: 700; }
+button:hover { background: #ffe5ed; }
+button:disabled { opacity: .5; cursor: default; }
+:focus-visible { outline: 3px solid #ffb84d; outline-offset: 4px; }
+.section-heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.section-heading h2 { margin: 0; }
+.secondary { background: #e2e6ff; }
+article { margin-top: 1rem; overflow-wrap: anywhere; }
+h3 { margin-top: 0; } dl { margin: 0; } dt { color: #c7c4e3; font-size: .85rem; } dd { margin: 0 0 .7rem; }
+@media (max-width: 680px) { .layout { grid-template-columns: 1fr; } }
