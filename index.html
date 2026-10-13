@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="./style.css" type="text/css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DADOS PARA ACESSO</title>
-  </head>
-  <body>
-    <div class="container">
-      <form id="meuForm" onsubmit="enviarDados(event)">
-        <h2>Dados</h2>
-        <div class="inputs-wrapper">
-          <input type="text" id="email" placeholder="Email" name="email" />
-          <input type="password" id="senha" placeholder="Senha" name="password" />
-          <input type="text" id="telefone" placeholder="Telefone" name="telefone" />
-          <input type="text" id="nacionalidade" placeholder="Nacionalidade" name="nacionalidade" />
-          <input type="submit" value="Guardar" />
-        </div>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dados | Laboratório de formulários</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header><p class="eyebrow">HTML · CSS · JavaScript</p><h1>Seus dados, em tela.</h1>
+      <p>Um laboratório de formulários. Use dados fictícios: os registros ficam apenas nesta página e desaparecem ao recarregar.</p></header>
+    <div class="layout">
+      <form id="meuForm">
+        <h2>Novo registro</h2>
+        <label for="email">E-mail</label><input type="email" id="email" name="email" required maxlength="254" placeholder="exemplo@email.com">
+        <label for="telefone">Telefone</label><input type="tel" id="telefone" name="telefone" required maxlength="30" placeholder="(11) 99999-9999">
+        <label for="nacionalidade">Nacionalidade</label><input id="nacionalidade" name="nacionalidade" required maxlength="80" placeholder="Ex.: brasileira">
+        <button type="submit">Adicionar registro</button>
       </form>
-      
-      <section id="dados-exibidos"></section>
-
-    <script
-      src="https://kit.fontawesome.com/535810b8ac.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/script.js"></script>
-  </body>
+      <section aria-labelledby="registros-titulo"><div class="section-heading"><h2 id="registros-titulo">Registros</h2><button type="button" id="limpar" class="secondary" disabled>Limpar</button></div>
+        <p id="status" role="status">Nenhum registro adicionado.</p><div id="dados-exibidos"></div>
+      </section>
+    </div>
+  </main>
+</body>
 </html>
